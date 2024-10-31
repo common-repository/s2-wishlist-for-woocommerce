@@ -1,0 +1,180 @@
+/**
+ * frontend.css
+ *
+ * @package S2 Wishlist
+ * @since   1.0.0
+ * @author Shuban Studio <shuban.studio@gmail.com>
+ * @version 1.0.5
+ */
+
+.s2-wishlist {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background-color: rgba(256, 256, 256, 0.5);
+    background-image: url(../images/wishlist.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    padding: 1.5rem;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.s2-wishlist:hover {
+    box-shadow: 0 0 11px rgba(0,0,0,.8);
+    background-color: rgb(255, 255, 255);
+}
+
+body.single-product .woocommerce-product-gallery .s2-wishlist {
+    top: unset;
+    bottom: 0;
+}
+
+.s2-wishlist-selected {
+    background-image: url(../images/selected-wishlist.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* my-account->my-wishlist page css */
+.woocommerce ul.wishlist-products li.product, .woocommerce-page ul.products li.product {
+    margin-right: auto;
+}
+/* my-account->my-wishlist page css */
+
+/* wishlist popbox css */
+.sticky-s2-wishlist {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+}
+
+.sticky-s2-wishlist .contents {
+    width: 100%;
+    text-align: center;
+}
+
+.sticky-s2-wishlist .contents .label{
+    color: white;
+    background-color: grey;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+    display: inline-block;
+}
+
+.sticky-s2-wishlist .footerbox {
+    width: 100%;
+}
+
+.sticky-s2-wishlist .popbox {
+    width: 100%;
+    background: #ebebeb;
+    text-align: justify;
+}
+
+.wishlist-popbox-products .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-transition: 200ms all ease-in-out;
+    transition: 200ms all ease-in-out;
+    width: 15px;
+    height: 30px;
+    padding: 0;
+    z-index: 11;
+    margin: -25px 0 0;
+}
+
+.wishlist-popbox-products .slick-prev {
+    background-image: url(../images/icon/arrow-left.svg);
+    width: 50px;
+    height: 50px;
+    opacity: 0.15;
+    left: -1px;
+}
+
+.wishlist-popbox-products .slick-next {
+    background-image: url(../images/icon/arrow-right.svg);
+    width: 50px;
+    height: 50px;
+    opacity: 0.15;
+    right: -1px;
+}
+
+.wishlist-popbox-products .slick-next:hover, .wishlist-popbox-products .slick-prev:hover {
+    opacity: 0.4;
+}
+
+.wishlist-popbox-products h2 {
+    font-size: 3.2rem;
+    margin: 0;
+}
+
+.woocommerce-popbox-product-gallery__wrapper {
+    position: relative;
+    width: max-content;
+}
+
+.wishlist-popbox-products .product {
+    margin: 1em 0 0 0;
+}
+
+.wishlist-popbox-products .add_to_cart_button {
+    font-size: 1.5rem;
+}
+
+#wishlist-popbox-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+/* wishlist popbox css */
+
+/* wishlist social-sharing css */
+div.s2-wishlist-social-sharing ul, .sticky-s2-wishlist div.s2-wishlist-social-sharing ul {
+    list-style: none;
+    display: flex;
+    float: right;
+}
+
+div.s2-wishlist-social-sharing a, .sticky-s2-wishlist div.s2-wishlist-social-sharing a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.s2-wishlist-social-sharing .dashicons-facebook {
+    color: rgb(66, 103, 178);
+}
+
+div.s2-wishlist-social-sharing .dashicons-twitter {
+    color: rgb(29, 161, 242);
+}
+
+div.s2-wishlist-social-sharing .dashicons-whatsapp {
+    color: rgb(37, 211, 102);
+}
+
+.sticky-s2-wishlist div.s2-wishlist-social-sharing {
+    position: relative;
+    z-index: 1;
+}
+/* wishlist social-sharing css */
